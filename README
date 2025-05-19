@@ -1,0 +1,17 @@
+Interfacer le capteur DHT11 avec une carte STM32, en utilisant la broche PA1 comme ligne de données.
+
+Le DHT11 est un capteur numérique permettant de mesurer la température et l’humidité relative. Il communique via une seule ligne de données et nécessite une initialisation spécifique.
+
+L’interfaçage commence par l’envoi d’un signal de démarrage (start signal) de la part du microcontrôleur. Après cela, le capteur envoie un signal de réponse (response signal) pour indiquer qu’il est prêt à transmettre les données.
+
+Une fois cette séquence d’initialisation terminée, les données de température et d’humidité sont lues et stockées pour traitement. Un délai de 3 secondes est respecté entre chaque lecture pour assurer un fonctionnement stable.
+
+Ce projet permet d’intégrer facilement des mesures environnementales dans une application embarquée basée sur STM32. Le capteur est alimenté en 3.3V depuis la carte, et une résistance de pull-up peut être nécessaire sur la broche de données pour garantir la fiabilité des communications.
+
+
+
+
+
+
+
+
